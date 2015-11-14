@@ -23,6 +23,8 @@
 #include <QDebug>
 #include <QThread>
 #include <QMutexLocker>
+#include <QUrl>
+#include <QQuickView>
 #include <iostream>//Port to QDebug
 #include <sstream>//Port to QDebug
 #include "tctrain.h"
@@ -49,7 +51,9 @@ public:
     QThread clockThread;
     TrafficClock trafficClock;
     TrafficMap *trafficMap;
-    QGraphicsScene *mapScene;
+//    QGraphicsScene *mapScene;
+    QQuickView *mapView;
+    QWidget *mapContainer;
 
 public slots:
     void addTrainToNetworkUI();

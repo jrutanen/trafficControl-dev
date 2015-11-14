@@ -4,7 +4,10 @@
 #
 #-------------------------------------------------
 
+QT       += quick
 QT       += core gui
+QT       += webkitwidgets
+QT       += quickwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -30,3 +33,11 @@ HEADERS  += trafficcontrol.h \
     trafficmap.h
 
 FORMS    += trafficcontrol.ui
+
+OTHER_FILES  =
+
+DISTFILES += \
+    map.qml
+
+RESOURCES += \
+    resources.qrc

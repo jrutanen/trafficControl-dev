@@ -63,12 +63,16 @@ TrafficControl::TrafficControl(QWidget *parent) :
     ui->stationListTableView->setModel( stationListModel );
     ui->stationListTableView->show();
 
-    mapScene = new QGraphicsScene(this);
+    QUrl source("qrc:Traffic/qml/map.qml");
+//    QUrl source("map.qml");
+//    QUrl source("qrc:quickwidget/rotatingsquare.qml");
 
-    ui->mapGraphicsView->setScene(mapScene);
+//    ui->mapQuickWidget->setSource(QUrl::fromLocalFile("map.qml"));
+    ui->mapQuickWidget->setSource(source);
+    //    ui->mapGraphicsView->setScene(mapContainer);
 
-    trafficMap = new TrafficMap();//
-    trafficMap->setGraphicsScene(*mapScene);
+//    trafficMap = new TrafficMap();//
+//    trafficMap->setGraphicsScene(*mapScene);
     //REMOVE FROM HERE
     /*QBrush greenBrush(Qt::green);
     QBrush blueBrush(Qt::blue);

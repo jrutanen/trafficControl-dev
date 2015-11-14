@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QMutexLocker>
 #include <QGraphicsScene>
+#include <QQuickView>
 
 class TrafficMap : public QObject
 {
